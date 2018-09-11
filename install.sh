@@ -1,7 +1,6 @@
 
 result = conda create -n colombina
 conda activate colombina
-echo $result
 conda install pytorch=0.4.1 torchvision -c pytorch
 conda install numpy=1.15.1
 conda install -c conda-forge opencv=3.4.1
