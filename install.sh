@@ -3,9 +3,9 @@ result = conda create -n colombina
 conda activate colombina
 conda install pytorch=0.4.1 torchvision -c pytorch
 conda install numpy=1.15.1
-conda install -c conda-forge opencv=3.4.1
+conda install -c conda-forge opencv=3.4.3
 
-
+pip install git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI 
 
 cd ~ && wget -qO- https://github.com/opencv/opencv/archive/3.4.3.tar.gz | tar xvz
 cd opencv-3.4.3
@@ -14,7 +14,7 @@ cd release
 cmake -DBUILD_TIFF=ON \
 		-DBUILD_opencv_java=OFF \
 		-DWITH_CUDA=OFF \
-		-DBUILD_PROTOBUF=OFF \
+		-DBUILD_PROTOBUF=ON \
 		-DPROTOBUF_UPDATE_FILES=ON \
 		-DWITH_OPENGL=ON \
 		-DWITH_OPENCL=ON \
